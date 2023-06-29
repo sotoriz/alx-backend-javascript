@@ -1,4 +1,4 @@
-Import Car from 10-car.js.
+import EVCar from './100-evcar.js';
 
 export default class Airport {
   constructor(name, code) {
