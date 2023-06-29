@@ -12,20 +12,13 @@ export default class EVCar extends Car {
   // Methods
 
   cloneCar() {
-    const NewObj = this.constructor[Symbol.species] || this.constructor;
-    const clone = new NewObj();
-    return clone;
+    const Species = super.constructor[Symbol.species];
+    return new Species();
   }
 
   // Setters
 
-  set range(value) {
-    this._range = value;
-  }
 
   // Getters
 
-    get range() {
-    return this._range;
-  }
 }
