@@ -15,6 +15,14 @@ export default class SkyHighBuilding extends Building {
 
   // Setters
 
+  set floors(value) {
+    this._floors = value;
+  }
+  set sqft(value) {
+    this._sqft = value;
+  }
+
+
   // Getters
   get sqft() {
     return this._sqft;
