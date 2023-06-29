@@ -13,20 +13,7 @@ export default class Airport {
 
   // Setters
 
-  set name(value) {
-    this._name = value;
-  }
-  set code(value) {
-    this._code = value;
-  }
 
+  // Getter
 
-  // Getters
-
-  get name() {
-    return this._name;
-  }
-  get code() {
-    return this._code;
-  }
 }
