@@ -1,28 +1,23 @@
-import EVCar from './100-evcar.js';
+import Car from './10-car';
 
-export default class Airport {
-  constructor(name, code) {
-    this.name = name;
-    this.code = code;
+export default class EVCar extends Car {
+  constructor(brand, motor, color, range) {
+    // call constructor of super class (Building)
+    super(brand, motor, color);
+
+    // Create objs
+    this._range = range;
   }
 
-  get name() {
-    return this._name;
+  // Methods
+
+  cloneCar() {
+    const NewObj = this.constructor[Symbol.species] || this.constructor;
+    const clone = new NewObj();
+    return clone;
   }
 
-  set name(value) {
-    this._name = value;
-  }
+  // Setters
 
-  get code() {
-    return this._code;
-  }
-
-  set code(value) {
-    this._code = value;
-  }
-
-  get [Symbol.toStringTag]() {
-    return this._code;
-  }
+  // Getters
 }
