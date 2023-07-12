@@ -1,9 +1,13 @@
 export default function iterateThroughObject(reportWithIterator) {
-  const employees = [];
-
-  for (const employee of reportWithIterator) {
-    employees.push(employee);
+  let items = ''; let i = 0;
+  for (const item of reportWithIterator) {
+    if (reportWithIterator.length - 1 === i) {
+      items += item;
+    } else {
+      items += `${item} | `;
+    }
+    // eslint-disable-next-line no-plusplus
+    i++;
   }
-
-  return employees.join(' | ');
+  return items;
 }
